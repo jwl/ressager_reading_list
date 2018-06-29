@@ -50,9 +50,6 @@ const RootQuery = new GraphQLObjectType({
       type: BookType,
       args: { id: { type: GraphQLID } },
       resolve(parent, args) {
-        // code to get data from db / other source
-        // use args.id
-        //console.log(typeof(args.id));
         return _.find(dummy_book_data, { id: args.id });
       }
     },
