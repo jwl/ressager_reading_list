@@ -77,6 +77,18 @@ const RootQuery = new GraphQLObjectType({
       resolve(parent, args) {
         return _.find(dummy_author_data, { id: args.id });
       }
+    },
+    get_all_books: {
+      type: new GraphQLList(BookType),
+      resolve(parent, args) {
+        return dummy_book_data
+      }
+    },
+    get_all_authors: {
+      type: new GraphQLList(AuthorType),
+      resolve(parent, args) {
+        return dummy_author_data
+      }
     }
   }
 });
