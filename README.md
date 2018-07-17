@@ -7,3 +7,13 @@ A simple book reading list app that stores information about books and their aut
 
 # Installation and Development Setup
 
+
+# Start-up
+* from root: 
+  * `nodemon server/app.js`
+
+# Test Info
+* test DB on mlab.com
+  * username: jwl
+  * password: test123
+  * mongodb://<dbuser>:<dbpassword>@ds123981.mlab.com:23981/ressager_reading_list
