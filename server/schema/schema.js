@@ -23,6 +23,7 @@ const {
   //{name: 'The Light Fantastic', genre: 'Fantasy', id: '6', authorId: '3'},
   //{name: 'The Obelisk Gate', genre: 'Sci-Fi', id: '8', authorId: '4'},
   //{name: 'The Stone Sky', genre: 'Sci-Fi', id: '9', authorId: '4'},
+  //{name: 'All Systems Red', genre: 'Sci-Fi', id: '10', authorId: '5'},
 //];
 
 //var dummy_author_data = [
@@ -30,6 +31,7 @@ const {
   //{name: 'Brandon Sanderson', age: 42, id: '2'},
   //{name: 'Terry Pratchett', age: 66, id: '3'},
   //{name: 'N.K. Jemisin', age: 45, id: '4'},
+  //{name: 'Martha Wells', age: 53, id: '5'},
 //];
 
 
@@ -95,6 +97,27 @@ const RootQuery = new GraphQLObjectType({
   }
 });
 
+const Mutation = new GraphQLObjectType({
+  name: 'Mutation',
+  fields: {
+    addAuthor: {
+      type: AuthorType,
+      args: {
+        name: { type: GraphQLString },
+        age: { type: GraphQLInt }
+      },
+      resolve(parent, args) {
+        let author = new Author({
+          name: args.name,
+          age: args.age
+        });
+        return author.save();
+      }
+    }
+  }
+});
+
 module.exports = new GraphQLSchema({
-  query: RootQuery
+  query: RootQuery,
+  mutation: Mutation
 })
