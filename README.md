@@ -16,4 +16,4 @@ A simple book reading list app that stores information about books and their aut
 * test DB on mlab.com
   * username: jwl
   * password: test123
-  * mongodb://<dbuser>:<dbpassword>@ds123981.mlab.com:23981/ressager_reading_list
+  * mongodb://jwl:test123@ds123981.mlab.com:23981/ressager_reading_list
