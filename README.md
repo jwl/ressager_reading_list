@@ -6,7 +6,7 @@ Sample files: https://github.com/iamshaunjp/graphql-playlist
 A simple book reading list app that stores information about books and their authors based off the Net Ninja GraphQL tutorial series.
 
 # Installation and Development Setup
-
+* `npm install`
 
 # Start-up
 * from root: 
