@@ -8,7 +8,6 @@ class BookList extends Component {
     if (data.loading) {
       return(<div>Loading books...</div>);
     } else {
-      console.log(this.props);
       return data.get_all_books.map(book => {
         return(
           <li key={ book.id }>{ book.name } ({ book.genre })</li>
