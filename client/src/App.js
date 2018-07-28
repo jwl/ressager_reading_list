@@ -7,14 +7,14 @@ import BookList from './components/BookList';
 import AddBook from './components/AddBook';
 
 // apollo client setup
-const apollo_client = new ApolloClient({
+const myApolloClient = new ApolloClient({
   uri: 'http://localhost:4000/graphql',
 });
 
 class App extends Component {
   render() {
     return (
-      <ApolloProvider client={apollo_client}>
+      <ApolloProvider client={myApolloClient}>
         <div id="main">
           <h1>My Reading List</h1>
           <BookList />
