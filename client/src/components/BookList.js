@@ -6,7 +6,7 @@ class BookList extends Component {
   displayBooks() {
     var data = this.props.data;
     if (data.loading) {
-      return(<div>Loading books...</div>);
+      return (<div>Loading books...</div>);
     } else {
       return data.get_all_books.map(book => {
         return(
